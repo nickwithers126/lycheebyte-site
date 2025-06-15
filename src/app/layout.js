@@ -1,5 +1,6 @@
 // app/layout.js
 import './globals.css'
+import Navbar from '../../components/Navbar'
 
 export const metadata = {
   title: 'LycheeByte Site',
@@ -8,8 +9,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }

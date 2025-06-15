@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main className="scroll-smooth">
+    <main>
         <section id="home" className="h-screen flex items-center justify-center bg-gray-100">
-            <h1 className="text-4xl font-bold">Home</h1>
+            <h1 className="text-4xl font-bold">LycheeByte (Labs)</h1>
         </section>
         
         <section id="competencies" className="h-screen flex items-center justify-center bg-gray-200">
