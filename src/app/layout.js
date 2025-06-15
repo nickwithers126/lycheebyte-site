@@ -3,8 +3,11 @@ import './globals.css'
 import Navbar from '../../components/Navbar'
 
 export const metadata = {
-  title: 'LycheeByte Site',
-  description: 'Website for LycheeByte',
+  title: 'LycheeByte',
+  description: 'LycheeByte – Innovative and sustainable CMP and cleaning solutions',
+  icons: {
+    icon: '/favicon.ico'
+  }
 }
 
 export default function RootLayout({ children }) {
