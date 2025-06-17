@@ -7,15 +7,15 @@ export default function Home() {
                 <h1 className="text-4xl font-bold">LycheeByte (Labs)</h1>
             </section>
 
-            <section id="competencies" className="min-h-screen bg-gray-200 px-4 flex flex-col">
+            <section id="competencies" className="scroll-mt-22 bg-gray-200 py-15 px-4 flex flex-col">
 
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-black text-center mt-35">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-15">
                     Core Competencies
                 </h2>
 
                 {/* Venn Diagram */}
-                <div className="flex-grow flex items-center justify-center mb-10">
-                    <div className="relative w-[98%] max-w-3xl aspect-square">
+                <div className="flex flex-col items-center justify-start">
+                    <div className="relative w-[90vw] max-w-[600px] aspect-square">
                         {/* Top Circle*/}
                         <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[62%] aspect-square bg-[#64C084]/30 rounded-full mix-blend-multiply flex items-center justify-center text-center">
                             <span className="text-sm sm:text-xl md:text-2xl font-semibold text-black -translate-y-[50%] relative">
@@ -62,8 +62,47 @@ export default function Home() {
                 <h2 className="text-4xl font-bold">About</h2>
             </section>
 
-            <section id="contact" className="h-screen flex items-center justify-center bg-gray-100">
-                <h2 className="text-4xl font-bold">Contact</h2>
+            <section id="contact" className="scroll-mt-22 bg-gray-100 py-15 px-4 flex flex-col">
+
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-15">
+                    Contact Us
+                </h2>
+
+                <form action="https://formsubmit.co/nickwithers26@gmail.com" method="POST" className="w-1/2 max-w-2xl min-w-[300px] mx-auto space-y-6">
+
+                    <input type="hidden" name="_captcha" value="false"></input>
+                    <input type="hidden" name="_next" value="https://lycheebyte-site.vercel.app/?submitted=true"></input>
+
+                    {/* Name */}
+                    <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                            Name
+                        </label>
+                        <input type="text" id="name" name="name" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
+                    </div>
+
+                    {/* Email */}
+                    <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="4" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
+                    </div> 
+
+                    {/* Submit */}
+                    <button type="submit" className="block mx-auto bg-[#64C084] text-white px-6 py-2 rounded-md hover:bg-[#4aa368] transition-colors">
+                        Submit
+                    </button>
+                </form>
+
             </section>
         </main>
     )

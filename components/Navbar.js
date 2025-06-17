@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Navbar() {
@@ -11,7 +12,8 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
                 {/* LycheeByte Name */}
                 <div className="text-lg font-bold text-black">
-                    <a href="#home" onClick={() => setIsOpen(false)}>
+                    <a className="flex items-center"href="#home" onClick={() => setIsOpen(false)}>
+                        <Image src="/logo_color.png" alt="LycheeByte Logo" width={28} height={28} className="mr-2"/>
                         LycheeByte
                     </a>
                 </div>
