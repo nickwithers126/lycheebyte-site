@@ -8,8 +8,8 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed top-4 left-1/2 transform -translate-x-1/2	w-[98%] bg-white shadow z-50 rounded-xl">
-            <div className="max-w-7xl mx-auto px-6 flex items-center justify-between py-4">
+        <nav className="fixed top-0 left-1/2 transform -translate-x-1/2	w-full bg-white z-50">
+            <div className="max-w-[1450px] mx-auto px-6 flex items-center justify-between py-4">
                 {/* LycheeByte Name */}
                 <div className="text-lg font-bold text-black">
                     <a className="flex items-center"href="#home" onClick={() => setIsOpen(false)}>
@@ -59,8 +59,11 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Dropdown */}
-            {isOpen && (
-                <ul className="md:hidden flex flex-col gap-4 px-6 pb-4 text-sm font-medium text-black">
+            <div
+                className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out 
+                ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+            >
+                <ul className="flex flex-col gap-4 px-7 pb-4 text-sm font-medium text-black">
                     <li><a href="#home" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Home</a></li>
                     <li><a href="#competencies" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Competencies</a></li>
                     <li><a href="#services" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Services</a></li>
@@ -69,7 +72,8 @@ export default function Navbar() {
                     <li><a href="#about" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">About</a></li>
                     <li><a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Contact</a></li>
                 </ul>
-            )}
+            </div>
+
         </nav>
     );
 }

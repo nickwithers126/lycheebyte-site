@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function Home() {
     return (
         <main>
-            <section id="home" className="h-screen flex items-center justify-center bg-gray-100">
+            <section id="home" className="h-screen flex items-center justify-center bg-white">
                 <h1 className="text-4xl font-bold">LycheeByte (Labs)</h1>
             </section>
 
