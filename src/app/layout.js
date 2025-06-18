@@ -7,7 +7,8 @@ export const metadata = {
   title: 'LycheeByte',
   description: 'LycheeByte – Innovative and sustainable CMP and cleaning solutions',
   icons: {
-    icon: '/favicon.ico'
+    icon: '/favicon.ico',
+    apple:'/apple-touch-icon.png'
   }
 }
 
