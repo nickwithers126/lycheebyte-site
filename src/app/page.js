@@ -7,7 +7,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold">LycheeByte (Labs)</h1>
             </section>
 
-            <section id="competencies" className="scroll-mt-22 bg-gray-200 py-15 px-4 flex flex-col">
+            <section id="competencies" className="scroll-mt-16 bg-gray-200 py-15 px-4 flex flex-col">
 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-15">
                     Core Competencies
