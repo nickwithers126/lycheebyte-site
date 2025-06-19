@@ -4,21 +4,21 @@ export default function Home() {
     return (
         <main>
             <section id="home" className="h-screen bg-white flex flex-col justify-center px-10 sm:px-20 md:px-30 relative">
-                {/* Slogan */}
+
                 <div className="text-left leading-tight mb-40">
                     <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold text-black max-w-xl">
                         Innovative<br />
                         and sustainable<br />
-                        CMP and cleaning<br />
+                        CMP and<br />
+                        cleaning<br />
                         solutions
                     </h1>
                 </div>
 
-                {/* LycheeByte Tag */}
                 <div className="mt-10 absolute bottom-30 right-15 sm:bottom-35 sm:right-35 md:bottom-40 md:right-40 lg:bottom-50 lg:right-50 text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#ca2976] leading-relaxed px-4 py-2 inline-block max-w-fit">
                     LycheeByte
                 </div>
-
+                
             </section>
 
             <section id="competencies" className="scroll-mt-16 bg-gray-200 py-15 px-4 flex flex-col">
