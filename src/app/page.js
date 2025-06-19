@@ -18,7 +18,7 @@ export default function Home() {
                 <div className="mt-10 absolute bottom-30 right-15 sm:bottom-35 sm:right-35 md:bottom-40 md:right-40 lg:bottom-50 lg:right-50 text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#ca2976] leading-relaxed px-4 py-2 inline-block max-w-fit">
                     LycheeByte
                 </div>
-                
+
             </section>
 
             <section id="competencies" className="scroll-mt-16 bg-gray-200 py-15 px-4 flex flex-col">
@@ -82,10 +82,16 @@ export default function Home() {
                     Contact Us
                 </h2>
 
-                <form action="https://formsubmit.co/nickwithers26@gmail.com" method="POST" className="w-1/2 max-w-2xl min-w-[300px] mx-auto space-y-6">
+                <form action="https://api.web3forms.com/submit" method="POST" className="w-1/2 max-w-2xl min-w-[300px] mx-auto space-y-6">
 
-                    <input type="hidden" name="_captcha" value="false"></input>
-                    <input type="hidden" name="_next" value="https://lycheebyte-site.vercel.app/?submitted=true"></input>
+                    {/* Web3Forms Access Key */}
+                    <input type="hidden" name="access_key" value="9ca19b9c-b4cd-48aa-ae0f-beb1aaef1e72" />
+
+                    {/* Redirect after success */}
+                    <input type="hidden" name="redirect" value="https://lycheebyte-site.vercel.app/?submitted=true" />
+
+                    {/* Optional: Honeypot for spam prevention */}
+                    <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
 
                     {/* Name */}
                     <div>
@@ -103,7 +109,7 @@ export default function Home() {
                         <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
                     </div>
 
-                    {/* Email */}
+                    {/* Message */}
                     <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                             Message
