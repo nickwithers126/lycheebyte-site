@@ -3,8 +3,22 @@ import Image from 'next/image';
 export default function Home() {
     return (
         <main>
-            <section id="home" className="h-screen flex items-center justify-center bg-white">
-                <h1 className="text-4xl font-bold">LycheeByte (Labs)</h1>
+            <section id="home" className="h-screen bg-white flex flex-col justify-center px-10 sm:px-20 md:px-30 relative">
+                {/* Slogan */}
+                <div className="text-left leading-tight mb-40">
+                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold text-black max-w-xl">
+                        Innovative<br />
+                        and sustainable<br />
+                        CMP and cleaning<br />
+                        solutions
+                    </h1>
+                </div>
+
+                {/* LycheeByte Tag */}
+                <div className="mt-10 absolute bottom-30 right-15 sm:bottom-35 sm:right-35 md:bottom-40 md:right-40 lg:bottom-50 lg:right-50 text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#ca2976] leading-relaxed px-4 py-2 inline-block max-w-fit">
+                    LycheeByte
+                </div>
+
             </section>
 
             <section id="competencies" className="scroll-mt-16 bg-gray-200 py-15 px-4 flex flex-col">
@@ -78,7 +92,7 @@ export default function Home() {
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                             Name
                         </label>
-                        <input type="text" id="name" name="name" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
+                        <input type="text" id="name" name="name" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
                     </div>
 
                     {/* Email */}
@@ -86,7 +100,7 @@ export default function Home() {
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                             Email
                         </label>
-                        <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
+                        <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
                     </div>
 
                     {/* Email */}
@@ -94,8 +108,8 @@ export default function Home() {
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700">
                             Message
                         </label>
-                        <textarea id="message" name="message" rows="4" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]"/>
-                    </div> 
+                        <textarea id="message" name="message" rows="4" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
+                    </div>
 
                     {/* Submit */}
                     <button type="submit" className="block mx-auto bg-[#64C084] text-white px-6 py-2 rounded-md hover:bg-[#4aa368] transition-colors">
