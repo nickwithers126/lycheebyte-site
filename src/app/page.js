@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Repeat, Box, Handshake } from 'lucide-react'
 
 export default function Home() {
     return (
@@ -64,8 +65,61 @@ export default function Home() {
                 <h2 className="text-4xl font-bold">Services</h2>
             </section>
 
-            <section id="strategies" className="h-screen flex items-center justify-center bg-gray-200">
-                <h2 className="text-4xl font-bold">Strategies</h2>
+            <section id="strategies" className="scroll-mt-16 py-15 px-4 bg-white">
+                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
+                    Development Strategies
+                </h2>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                    {/* Process Card */}
+                    <div className="rounded-xl bg-[#64C084] text-black p-8 shadow-md">
+                        <div className="flex justify-center mb-4">
+                            <Repeat className="w-8 h-8 text-black" />
+                        </div>
+                        <h3 className="text-2xl font-semibold text-center mb-4">Process</h3>
+                        <ul className="list-disc pl-4 text-sm space-y-2">
+                            <li>Data driven</li>
+                            <li>Systematic (DOE)</li>
+                            <li>Six Sigma</li>
+                            <li>DFM</li>
+                            <li>Biased for automation and technology adaptation</li>
+                        </ul>
+                    </div>
+
+                    {/* Product Card */}
+                    <div className="rounded-xl bg-black text-white p-8 shadow-md">
+                        <div className="flex justify-center mb-4">
+                            <Box className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-semibold text-center mb-4">Product</h3>
+                        <ul className="list-disc pl-4 text-sm space-y-2">
+                            <li>Customer-driven innovation</li>
+                            <li>
+                                Stage-gate process:
+                                <ul className="list-disc pl-6 mt-2 space-y-1">
+                                    <li>Discover</li>
+                                    <li>Create</li>
+                                    <li>Develop</li>
+                                    <li>Deploy</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Business Card */}
+                    <div className="rounded-xl bg-[#ca2976] text-white p-8 shadow-md">
+                        <div className="flex justify-center mb-4">
+                            <Handshake className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-2xl font-semibold text-center mb-4">Business</h3>
+                        <ul className="list-disc pl-4 text-sm space-y-2">
+                            <li>Customer satisfaction</li>
+                            <li>Collaboration and strategic partnerships</li>
+                            <li>Brand building and technical marketing</li>
+                            <li>Global mindset for international expansion</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
 
             <section id="projects" className="h-screen flex items-center justify-center bg-gray-100">
