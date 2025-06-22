@@ -4,7 +4,7 @@ import { Repeat, Box, Handshake } from 'lucide-react'
 export default function Home() {
     return (
         <main>
-            <section id="home" className="h-screen bg-white flex flex-col justify-center px-10 sm:px-20 md:px-30 relative">
+            <section id="home" className="h-[100dvh] bg-white flex flex-col justify-center px-10 sm:px-20 md:px-30 relative">
 
                 <div className="text-left leading-tight mb-40">
                     <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold text-black max-w-xl">
