@@ -21,9 +21,8 @@ export default function Navbar() {
                 {/* Desktop Menu */}
                 <ul className="hidden md:flex gap-6 text-sm font-medium text-black">
                     <li><a href="#home" className="hover:text-[#ca2976]">Home</a></li>
-                    <li><a href="#competencies" className="hover:text-[#ca2976]">Competencies</a></li>
-                    <li><a href="#services" className="hover:text-[#ca2976]">Services</a></li>
-                    <li><a href="#strategies" className="hover:text-[#ca2976]">Strategies</a></li>
+                    <li><a href="#competencies" className="hover:text-[#ca2976]">Core Competencies</a></li>
+                    <li><a href="#strategies" className="hover:text-[#ca2976]">Development Strategies</a></li>
                     <li><a href="#projects" className="hover:text-[#ca2976]">Projects</a></li>
                     <li><a href="#about" className="hover:text-[#ca2976]">About</a></li>
                     <li><a href="#contact" className="hover:text-[#ca2976]">Contact</a></li>
@@ -65,9 +64,8 @@ export default function Navbar() {
             >
                 <ul className="flex flex-col gap-4 px-7 pb-4 text-sm font-medium text-black">
                     <li><a href="#home" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Home</a></li>
-                    <li><a href="#competencies" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Competencies</a></li>
-                    <li><a href="#services" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Services</a></li>
-                    <li><a href="#strategies" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Strategies</a></li>
+                    <li><a href="#competencies" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Core Competencies</a></li>
+                    <li><a href="#strategies" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Development Strategies</a></li>
                     <li><a href="#projects" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Projects</a></li>
                     <li><a href="#about" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">About</a></li>
                     <li><a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-[#ca2976]">Contact</a></li>

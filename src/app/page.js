@@ -22,32 +22,49 @@ export default function Home() {
 
             </section>
 
-            <section id="competencies" className="scroll-mt-16 bg-gray-200 py-15 px-4 flex flex-col">
+            <section id="competencies" className="scroll-mt-16 bg-[#ca2976] py-15 px-4 flex flex-col">
 
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-15">
-                    Core Competencies
-                </h2>
+                {/* Header Area */}
+                <div className="w-full max-w-7xl px-4 mx-auto mb-10 text-left">
+                    <div className="inline-block bg-black text-white text-xs font-bold tracking-wide px-3 py-1">
+                        / / CORE COMPETENCIES / /
+                    </div>
+
+                    <h2 className="text-3xl md:text-4xl font-semibold mt-5 max-w-4xl text-white">
+                        Driving innovation through the seamless integration of product, process, and business development.
+                    </h2>
+                </div>
 
                 {/* Venn Diagram */}
                 <div className="flex flex-col items-center justify-start">
                     <div className="relative w-[90vw] max-w-[600px] aspect-square">
+
                         {/* Top Circle*/}
-                        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[62%] aspect-square bg-[#64C084]/30 rounded-full mix-blend-multiply flex items-center justify-center text-center">
-                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-black -translate-y-[50%] relative">
+                        <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[62%] aspect-square bg-black/20 rounded-full ring-2 ring-white flex items-center justify-center text-center" />
+
+                        {/* Top Text */}
+                        <div className="absolute left-1/2 -translate-x-1/2 top-[20%] text-center">
+                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-white">
                                 Process<br />Development
                             </span>
                         </div>
 
                         {/* Bottom Left Circle */}
-                        <div className="absolute bottom-0 left-0 w-[62%] aspect-square bg-[#64C084]/40 rounded-full mix-blend-multiply flex items-center justify-center text-center">
-                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-black -translate-x-[50%] relative">
+                        <div className="absolute bottom-0 left-0 w-[62%] aspect-square bg-black/20 rounded-full ring-2 ring-white flex items-center justify-center text-center" />
+
+                        {/* Bottom Left Text */}
+                        <div className="absolute bottom-[25%] left-[20%] text-center -translate-x-1/2">
+                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-white">
                                 Product<br />Development
                             </span>
                         </div>
 
                         {/* Bottom Right Circle */}
-                        <div className="absolute bottom-0 right-0 w-[62%] aspect-square bg-[#64C084]/50 rounded-full mix-blend-multiply flex items-center justify-center text-center">
-                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-black translate-x-[50%] relative">
+                        <div className="absolute bottom-0 right-0 w-[62%] aspect-square bg-black/20 rounded-full ring-2 ring-white flex items-center justify-center text-center" />
+
+                        {/* Bottom Right Text */}
+                        <div className="absolute bottom-[25%] right-[20%] text-center translate-x-1/2">
+                            <span className="text-sm sm:text-xl md:text-2xl font-semibold text-white">
                                 Business<br />Development
                             </span>
                         </div>
@@ -56,28 +73,82 @@ export default function Home() {
                         <div className="absolute left-[50%] top-[54%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
                             <Image src="/logo_white.png" alt="LycheeByte Logo" width={500} height={500} className="w-[18%] h-auto" />
                         </div>
+
+                        {/* Intersection: Process + Product (Left Overlap) */}
+                        <div className="absolute left-[33%] top-[46%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="text-white text-xl font-bold">1</span>
+                        </div>
+
+                        {/* Intersection: Process + Business (Right Overlap) */}
+                        <div className="absolute left-[67%] top-[46%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="text-white text-xl font-bold">2</span>
+                        </div>
+
+                        {/* Intersection: All Three (Center Overlap) */}
+                        <div className="absolute left-1/2 top-[74%] -translate-x-1/2 -translate-y-1/2 z-10">
+                            <span className="text-white text-xl font-bold">3</span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Intersection Info Cards */}
+                <div className="mt-12 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {/* Product + Process */}
+                    <div className="bg-white text-black shadow-md p-6">
+                        <h3 className="text-lg font-semibold mb-4">1. Product + Process</h3>
+                        <ul className="list-disc pl-5 space-y-1 text-sm">
+                            <li>Capital equipment selection</li>
+                            <li>Quality management system development</li>
+                            <li>Lean manufacturing</li>
+                        </ul>
+                    </div>
+
+                    {/* Process + Business */}
+                    <div className="bg-white text-black shadow-md p-6">
+                        <h3 className="text-lg font-semibold mb-4">2. Process + Business</h3>
+                        <ul className="list-disc pl-5 space-y-1 text-sm">
+                            <li>Supply chain management</li>
+                            <li>Contract-toll manufacturing setup</li>
+                            <li>Business continuity planning</li>
+                        </ul>
+                    </div>
+
+                    {/* Product + Business */}
+                    <div className="bg-white text-black shadow-md p-6">
+                        <h3 className="text-lg font-semibold mb-4">3. Product + Business</h3>
+                        <ul className="list-disc pl-5 space-y-1 text-sm">
+                            <li>Value proposition development</li>
+                            <li>Go-to-market strategy</li>
+                            <li>Pathfinding</li>
+                        </ul>
                     </div>
                 </div>
 
             </section>
 
-            <section id="services" className="h-screen flex items-center justify-center bg-gray-100">
-                <h2 className="text-4xl font-bold">Services</h2>
-            </section>
+            <section id="strategies" className="scroll-mt-16 py-15 px-4 bg-gray-200">
 
-            <section id="strategies" className="scroll-mt-16 py-15 px-4 bg-white">
-                <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12">
-                    Development Strategies
-                </h2>
+                {/* Header Area */}
+                <div className="max-w-7xl mx-auto mb-10">
+                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1">
+                        / / DEVELOPMENT STRATEGIES / /
+                    </div>
 
+                    <h2 className="text-3xl md:text-4xl font-semibold mt-5 max-w-4xl">
+                        Strategic frameworks that scale ideas into impact — from design to delivery.
+                    </h2>
+                </div>
+
+                {/* Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
                     {/* Process Card */}
-                    <div className="rounded-xl bg-[#64C084] text-black p-8 shadow-md">
-                        <div className="flex justify-center mb-4">
+                    <div className="bg-white text-black border-t-4 border-[#ca2976] p-6 shadow-sm">
+                        <div className="mb-4 flex justify-center">
                             <Repeat className="w-8 h-8 text-black" />
                         </div>
-                        <h3 className="text-2xl font-semibold text-center mb-4">Process</h3>
-                        <ul className="list-disc pl-4 text-sm space-y-2">
+                        <h3 className="text-lg md:text-2xl font-semibold mb-3">Process</h3>
+                        <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
                             <li>Data driven</li>
                             <li>Systematic (DOE)</li>
                             <li>Six Sigma</li>
@@ -87,16 +158,16 @@ export default function Home() {
                     </div>
 
                     {/* Product Card */}
-                    <div className="rounded-xl bg-black text-white p-8 shadow-md">
-                        <div className="flex justify-center mb-4">
-                            <Box className="w-8 h-8 text-white" />
+                    <div className="bg-white text-black border-t-4 border-[#ca2976] p-6 shadow-sm">
+                        <div className="mb-4 flex justify-center">
+                            <Box className="w-8 h-8 text-black" />
                         </div>
-                        <h3 className="text-2xl font-semibold text-center mb-4">Product</h3>
-                        <ul className="list-disc pl-4 text-sm space-y-2">
+                        <h3 className="text-lg md:text-2xl font-semibold mb-3">Product</h3>
+                        <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
                             <li>Customer-driven innovation</li>
                             <li>
                                 Stage-gate process:
-                                <ul className="list-disc pl-6 mt-2 space-y-1">
+                                <ul className="list-disc pl-5 mt-1 space-y-1">
                                     <li>Discover</li>
                                     <li>Create</li>
                                     <li>Develop</li>
@@ -107,30 +178,31 @@ export default function Home() {
                     </div>
 
                     {/* Business Card */}
-                    <div className="rounded-xl bg-[#ca2976] text-white p-8 shadow-md">
-                        <div className="flex justify-center mb-4">
-                            <Handshake className="w-8 h-8 text-white" />
+                    <div className="bg-white text-black border-t-4 border-[#ca2976] p-6 shadow-sm">
+                        <div className="mb-4 flex justify-center">
+                            <Handshake className="w-8 h-8 text-black" />
                         </div>
-                        <h3 className="text-2xl font-semibold text-center mb-4">Business</h3>
-                        <ul className="list-disc pl-4 text-sm space-y-2">
+                        <h3 className="text-lg md:text-2xl font-semibold mb-3">Business</h3>
+                        <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
                             <li>Customer satisfaction</li>
                             <li>Collaboration and strategic partnerships</li>
                             <li>Brand building and technical marketing</li>
                             <li>Global mindset for international expansion</li>
                         </ul>
                     </div>
+
                 </div>
             </section>
 
-            <section id="projects" className="h-screen flex items-center justify-center bg-gray-100">
-                <h2 className="text-4xl font-bold">Projects</h2>
+            <section id="projects" className="h-screen flex items-center justify-center bg-black">
+                <h2 className="text-4xl font-bold text-white">Projects</h2>
             </section>
 
-            <section id="about" className="h-screen flex items-center justify-center bg-gray-200">
+            <section id="about" className="h-screen flex items-center justify-center bg-[#64C084]">
                 <h2 className="text-4xl font-bold">About</h2>
             </section>
 
-            <section id="contact" className="scroll-mt-22 bg-gray-100 py-15 px-4 flex flex-col">
+            <section id="contact" className="scroll-mt-16 bg-white py-15 px-4 flex flex-col">
 
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-black text-center mb-15">
                     Contact Us
@@ -149,30 +221,30 @@ export default function Home() {
 
                     {/* Name */}
                     <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="name" className="block text-sm font-medium text-black">
                             Name
                         </label>
-                        <input type="text" id="name" name="name" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
+                        <input type="text" id="name" name="name" required className="mt-1 w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
                     </div>
 
                     {/* Email */}
                     <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="email" className="block text-sm font-medium text-black">
                             Email
                         </label>
-                        <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
+                        <input type="email" id="email" name="email" required className="mt-1 w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
                     </div>
 
                     {/* Message */}
                     <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="message" className="block text-sm font-medium text-black">
                             Message
                         </label>
-                        <textarea id="message" name="message" rows="4" required className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#64C084]" />
+                        <textarea id="message" name="message" required className="mt-1 w-full px-4 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#64C084] h-40 sm:h-48 md:h-56" />
                     </div>
 
                     {/* Submit */}
-                    <button type="submit" className="block mx-auto bg-[#64C084] text-white px-6 py-2 rounded-md hover:bg-[#4aa368] transition-colors">
+                    <button type="submit" className="block mx-auto bg-[#64C084] text-white px-6 py-2 hover:bg-[#4aa368] transition-colors">
                         Submit
                     </button>
                 </form>

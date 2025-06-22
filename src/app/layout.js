@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <Popup />
         {children}
       </body>
-      <footer className="w-full bg-gray-100 text-center py-4 text-sm text-gray-500">
+      <footer className="w-full bg-white text-center py-4 text-sm text-gray-500">
         © 2025 LycheeByte
       </footer>
     </html>
