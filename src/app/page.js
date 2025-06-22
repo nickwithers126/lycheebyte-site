@@ -97,7 +97,7 @@ export default function Home() {
                     {/* Product + Process */}
                     <div className="bg-white text-black shadow-md p-6">
                         <h3 className="text-lg font-semibold mb-4">
-                            1. Process <span className="text-xl font-bold">∩</span> Procduct
+                            1. Process <span className="text-xl font-bold">∩</span> Product
                         </h3>
                         <ul className="list-disc pl-5 space-y-1 text-sm">
                             <li>Capital equipment selection</li>
