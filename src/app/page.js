@@ -96,7 +96,9 @@ export default function Home() {
                 <div className="mt-12 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Product + Process */}
                     <div className="bg-white text-black shadow-md p-6">
-                        <h3 className="text-lg font-semibold mb-4">1. Product ∩ Process</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            1. Process <span className="text-xl font-bold">∩</span> Procduct
+                        </h3>
                         <ul className="list-disc pl-5 space-y-1 text-sm">
                             <li>Capital equipment selection</li>
                             <li>Quality management system development</li>
@@ -106,7 +108,9 @@ export default function Home() {
 
                     {/* Process + Business */}
                     <div className="bg-white text-black shadow-md p-6">
-                        <h3 className="text-lg font-semibold mb-4">2. Process ∩ Business</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            2. Process <span className="text-xl font-bold">∩</span> Business
+                        </h3>
                         <ul className="list-disc pl-5 space-y-1 text-sm">
                             <li>Supply chain management</li>
                             <li>Contract-toll manufacturing setup</li>
@@ -116,7 +120,9 @@ export default function Home() {
 
                     {/* Product + Business */}
                     <div className="bg-white text-black shadow-md p-6">
-                        <h3 className="text-lg font-semibold mb-4">3. Product ∩ Business</h3>
+                        <h3 className="text-lg font-semibold mb-4">
+                            3. Product <span className="text-xl font-bold">∩</span> Business
+                        </h3>
                         <ul className="list-disc pl-5 space-y-1 text-sm">
                             <li>Value proposition development</li>
                             <li>Go-to-market strategy</li>
