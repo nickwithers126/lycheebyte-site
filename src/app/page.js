@@ -197,7 +197,7 @@ export default function Home() {
                     </div>
 
                     {/* Content */}
-                    <div className="bg-white text-black p-8 text-sm md:text-lg border-l-4 border-[#ca2976] shadow-md leading-relaxed md:leading-loose">
+                    <div className="bg-white text-black p-8 text-md md:text-lg border-l-4 border-[#ca2976] shadow-md leading-relaxed md:leading-loose">
                         <p>
                             We are a semiconductor consulting firm with deep roots in materials science, process engineering, and technology development. 
                             With over 30 years of experience across capital equipment OEMs, device manufacturers, and consumable suppliers, we understand how all elements of the ecosystem interact—and why that matters. 
