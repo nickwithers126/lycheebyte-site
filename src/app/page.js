@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Repeat, Box, Handshake } from 'lucide-react'
 
+
 export default function Home() {
     return (
         <main>
@@ -16,7 +17,7 @@ export default function Home() {
                     </h1>
                 </div>
 
-                <div className="mt-10 absolute bottom-30 right-15 sm:bottom-35 sm:right-35 md:bottom-40 md:right-40 lg:bottom-50 lg:right-50 text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#ca2976] leading-relaxed px-4 py-2 inline-block max-w-fit">
+                <div className="shadow-md mt-10 absolute bottom-30 right-15 sm:bottom-35 sm:right-35 md:bottom-40 md:right-40 lg:bottom-50 lg:right-50 text-white font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-[#ca2976] leading-relaxed px-4 py-2 inline-block max-w-fit">
                     LycheeByte
                 </div>
 
@@ -149,10 +150,8 @@ export default function Home() {
                         </div>
                         <h3 className="text-lg md:text-2xl font-semibold mb-3">Process</h3>
                         <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
-                            <li>Data driven</li>
-                            <li>Systematic (DOE)</li>
-                            <li>Six Sigma</li>
-                            <li>DFM</li>
+                            <li>Structured and systematic (DOE)</li>
+                            <li>Designed for manufacturability (DFM)</li>
                             <li>Biased for automation and technology adaptation</li>
                         </ul>
                     </div>
@@ -165,15 +164,8 @@ export default function Home() {
                         <h3 className="text-lg md:text-2xl font-semibold mb-3">Product</h3>
                         <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
                             <li>Customer-driven innovation</li>
-                            <li>
-                                Stage-gate process:
-                                <ul className="list-disc pl-5 mt-1 space-y-1">
-                                    <li>Discover</li>
-                                    <li>Create</li>
-                                    <li>Develop</li>
-                                    <li>Deploy</li>
-                                </ul>
-                            </li>
+                            <li>Iterative development and rapid prototyping</li>
+                            <li>Prioritization of reliability, sustainability, and IP protection</li>
                         </ul>
                     </div>
 
@@ -184,10 +176,9 @@ export default function Home() {
                         </div>
                         <h3 className="text-lg md:text-2xl font-semibold mb-3">Business</h3>
                         <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
-                            <li>Customer satisfaction</li>
-                            <li>Collaboration and strategic partnerships</li>
+                            <li>Open collaboration and strategic partnerships</li>
                             <li>Brand building and technical marketing</li>
-                            <li>Global mindset for international expansion</li>
+                            <li>Global mindset for international adoption and expansion</li>
                         </ul>
                     </div>
 
@@ -198,9 +189,26 @@ export default function Home() {
                 <h2 className="text-4xl font-bold text-white">Projects</h2>
             </section>
 
-            <section id="about" className="h-screen flex items-center justify-center bg-[#64C084]">
-                <h2 className="text-4xl font-bold">About</h2>
+            <section id="about" className="scroll-mt-16 py-15 px-4" style={{ backgroundColor: '#64C084' }}>
+                <div className="max-w-7xl mx-auto mb-10">
+                    {/* Section Tag */}
+                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1 mb-10">
+                        / / ABOUT US / /
+                    </div>
+
+                    {/* Content */}
+                    <div className="bg-white text-black p-8 text-sm md:text-lg border-l-4 border-[#ca2976] shadow-md leading-relaxed md:leading-loose">
+                        We are a semiconductor consulting firm with deep roots in materials science, process engineering, and technology development. 
+                        With over 30 years of experience across capital equipment OEMs, device manufacturers, and consumable suppliers, we understand how all elements of the ecosystem interact—and why that matters. 
+                        Our team brings a unique blend of technical depth and business insight, supporting clients with innovation strategy, process optimization, and product development across global markets. 
+                        Whether you're scaling a new technology or refining an existing one, we help bridge the gaps between engineering, manufacturing, and market success.
+                        <Image src="/logo_black.png" alt="LycheeByte Logo" width={100} height={100} className="w-[50px] h-auto mt-4 ml-auto pr-2" />
+                    </div>
+
+                </div>
             </section>
+
+
 
             <section id="contact" className="scroll-mt-16 bg-white py-15 px-4 flex flex-col">
 
@@ -244,7 +252,7 @@ export default function Home() {
                     </div>
 
                     {/* Submit */}
-                    <button type="submit" className="block mx-auto bg-[#64C084] text-white px-6 py-2 hover:bg-[#4aa368] transition-colors">
+                    <button type="submit" className="block mx-auto bg-[#64C084] text-[white] px-6 py-2 hover:bg-[#4aa368] transition-colors">
                         Submit
                     </button>
                 </form>
