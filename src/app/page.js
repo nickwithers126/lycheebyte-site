@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Repeat, Box, Handshake } from 'lucide-react'
-
+import Carousel from '../../components/Carousel';
 
 export default function Home() {
     return (
@@ -26,7 +26,7 @@ export default function Home() {
             <section id="competencies" className="scroll-mt-16 bg-[#ca2976] py-15 px-4 flex flex-col">
 
                 {/* Header Area */}
-                <div className="w-full max-w-7xl px-4 mx-auto mb-10 text-left">
+                <div className="w-full max-w-7xl px-4 mx-auto mb-15 text-left">
                     <div className="inline-block bg-black text-white text-xs font-bold tracking-wide px-3 py-1">
                         / / CORE COMPETENCIES / /
                     </div>
@@ -136,7 +136,7 @@ export default function Home() {
             <section id="strategies" className="scroll-mt-16 py-15 px-4 bg-gray-200">
 
                 {/* Header Area */}
-                <div className="max-w-7xl mx-auto mb-10">
+                <div className="max-w-7xl mx-auto mb-15">
                     <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1">
                         / / DEVELOPMENT STRATEGIES / /
                     </div>
@@ -191,14 +191,24 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="projects" className="h-screen flex items-center justify-center bg-black">
-                <h2 className="text-4xl font-bold text-white">Projects</h2>
+            <section id="projects" className="scroll-mt-16 py-15 px-4 bg-black">
+
+                {/* Header Area */}
+                <div className="max-w-7xl mx-auto mb-15">
+                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1">
+                        / / PROJECTS / /
+                    </div>
+                </div>
+
+                <div className="max-w-7xl mx-auto">
+                    <Carousel />
+                </div>
             </section>
 
             <section id="about" className="scroll-mt-16 py-15 px-4" style={{ backgroundColor: '#64C084' }}>
-                <div className="max-w-7xl mx-auto mb-10">
+                <div className="max-w-7xl mx-auto">
                     {/* Section Tag */}
-                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1 mb-10">
+                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1 mb-15">
                         / / ABOUT US / /
                     </div>
 
@@ -215,8 +225,6 @@ export default function Home() {
 
                 </div>
             </section>
-
-
 
             <section id="contact" className="scroll-mt-16 bg-white py-15 px-4 flex flex-col">
 
