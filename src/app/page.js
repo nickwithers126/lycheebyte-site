@@ -195,7 +195,7 @@ export default function Home() {
 
                 {/* Header Area */}
                 <div className="max-w-7xl mx-auto mb-15">
-                    <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1">
+                    <div className="inline-block bg-[#64C084] text-black text-xs font-bold tracking-wide px-3 py-1">
                         / / PROJECTS / /
                     </div>
                 </div>
@@ -205,7 +205,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="about" className="scroll-mt-16 py-15 px-4" style={{ backgroundColor: '#64C084' }}>
+            <section id="about" className="scroll-mt-16 py-15 px-4 bg-[#64C084]">
                 <div className="max-w-7xl mx-auto">
                     {/* Section Tag */}
                     <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1 mb-15">

@@ -1,6 +1,6 @@
 'use client';
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { CircleArrowLeft, CircleArrowRight } from 'lucide-react';
 
 export default function Carousel() {
   const projects = [
@@ -21,12 +21,33 @@ export default function Carousel() {
     },
   ];
 
-  const [index, setIndex] = useState(0); // 0 = show 1&2, 1 = show 2&3
+  const [index, setIndex] = useState(0);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [itemsPerView, setItemsPerView] = useState(2);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+    const updateItemsPerView = () => {
+      setItemsPerView(mediaQuery.matches ? 2 : 1);
+    }
+
+    updateItemsPerView(); // Set initial value
+    mediaQuery.addEventListener('change', updateItemsPerView);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateItemsPerView);
+    }
+
+  }, []);
 
   const handleNext = () => {
-    setIndex(1);
+    if (itemsPerView === 1) {
+      setIndex(index + 1);
+    } else {
+      setIndex(2);
+    }
     setShowLeftArrow(false); // hide left during transition
     setShowRightArrow(false); // hide right too to prevent flicker
     setTimeout(() => {
@@ -36,7 +57,11 @@ export default function Carousel() {
   };
 
   const handlePrev = () => {
-    setIndex(0);
+    if (itemsPerView === 1) {
+      setIndex(index - 1);
+    } else {
+      setIndex(0);
+    }
     setShowRightArrow(false); // hide right during slide back
     setShowLeftArrow(false); // hide left since we’ll be back at the beginning
     setTimeout(() => {
@@ -52,31 +77,31 @@ export default function Carousel() {
       <button
         onClick={handlePrev}
         disabled={index === 0}
-        className={`mr-5 p-2 bg-[#ca2976] rounded-full z-10 transition-opacity duration-300 ${index === 0 || !showLeftArrow ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          }`}
+        className={`mr-3 rounded-full z-10 transition-opacity duration-300 
+          ${index === 0 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       >
-        <ChevronLeft size={32} color="white" />
+        <CircleArrowLeft size={40} color="#64C084" />
       </button>
 
       {/* Viewport */}
       <div className="overflow-hidden w-full">
         <div
-          className="flex transition-transform duration-500 ease-in-out"
+          className="flex transition-transform duration-500 md:duration-00 ease-in-out"
           style={{
-            width: `${projects.length * (100 / 2)}%`,
+            width: `${projects.length * (100 / itemsPerView)}%`,
             transform: `translateX(-${index * (100 / projects.length)}%)`,
           }}
         >
           {projects.map((project, i) => (
             <div key={i} className="w-[33.3333%] flex-shrink-0 px-4 box-border flex items-stretch">
-              <div className="overflow-hidden shadow-md h-120 w-full">
+              <div className="overflow-hidden h-auto w-full">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-96 object-cover mb-4"
+                  className="w-full h-80 md:h-96 object-cover mb-4"
                 />
-                <h3 className="text-2xl font-semibold mb-2 text-white">{project.title}</h3>
-                <p className="text-base text-white">{project.description}</p>
+                <h3 className="text-lg md:text-2xl font-semibold mb-2 text-white">{project.title}</h3>
+                <p className="text-sm md:text-base text-white">{project.description}</p>
               </div>
             </div>
           ))}
@@ -86,11 +111,11 @@ export default function Carousel() {
       {/* Right Arrow */}
       <button
         onClick={handleNext}
-        disabled={index === 1}
-        className={` ml-5 p-2 bg-[#ca2976] rounded-full z-10 transition-opacity duration-300 ${index === 1 || !showRightArrow ? 'opacity-0 pointer-events-none' : 'opacity-100'
-          }`}
+        disabled={index === 2}
+        className={`ml-3 rounded-full z-10 transition-opacity duration-300 
+          ${index === 2 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       >
-        <ChevronRight size={32} color="white" />
+        <CircleArrowRight size={40} color="#64C084" />
       </button>
     </div>
   );
