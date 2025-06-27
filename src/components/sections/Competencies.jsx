@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export default function Competencies() {
     return (
-        <section id="competencies" className="scroll-mt-16 bg-[#ca2976] py-15 px-4 flex flex-col">
+        <section id="competencies" className="scroll-mt-16 bg-[#ca2976] py-15 px-4">
             {/* Header Area */}
-            <div className="w-full max-w-7xl px-4 mx-auto mb-15 text-left">
+            <div className="max-w-7xl mx-auto mb-15">
                 <div className="inline-block bg-black text-white text-xs font-bold tracking-wide px-3 py-1">
                     / / CORE COMPETENCIES / /
                 </div>

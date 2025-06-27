@@ -1,12 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { CircleArrowLeft, CircleArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Carousel() {
   const projects = [
     {
       title: 'Post-CMP Consumable Manufacturer',
-      description: 'Applications lab design and strategy for product development',
+      description: 'Applications lab design and strategy for product marketing',
       image: '/project1.jpg',
     },
     {
@@ -95,11 +96,15 @@ export default function Carousel() {
           {projects.map((project, i) => (
             <div key={i} className="w-[33.3333%] flex-shrink-0 px-4 box-border flex items-stretch">
               <div className="overflow-hidden h-auto w-full">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-80 md:h-96 object-cover mb-4"
-                />
+                <div className="w-full h-80 md:h-96 relative mb-4">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(min-width: 768px) 100vw, 100vw"
+                  />
+                </div>
                 <h3 className="text-lg md:text-2xl font-semibold mb-2 text-white">{project.title}</h3>
                 <p className="text-sm md:text-base text-white">{project.description}</p>
               </div>

@@ -2,7 +2,7 @@ export default function Hero() {
     return (
         <section id="home" className="min-h-screen bg-white flex flex-col justify-center px-10 sm:py-20">
             <div className="w-full max-w-7xl mx-auto">
-                <div className="hero-heading text-left leading-tight mb-40">
+                <div className="hero-heading relative md:top-30 text-left leading-tight mb-40">
                     <h1 className="hero-heading text-4xl sm:text-6xl md:text-7xl font-semibold text-black max-w-xl">
                         Innovative<br />
                         and sustainable<br />
