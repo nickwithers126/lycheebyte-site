@@ -245,7 +245,7 @@ export default function Home() {
                 <form action="https://api.web3forms.com/submit" method="POST" className="w-1/2 max-w-2xl min-w-[300px] mx-auto space-y-6">
 
                     {/* Web3Forms Access Key */}
-                    <input type="hidden" name="access_key" value="9ca19b9c-b4cd-48aa-ae0f-beb1aaef1e72" />
+                    <input type="hidden" name="access_key" value="af71db1c-ffba-4604-8267-14a1cd275801" />
 
                     {/* Redirect after success */}
                     <input type="hidden" name="redirect" value="https://lycheebyte-site.vercel.app/?submitted=true" />
