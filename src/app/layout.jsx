@@ -2,6 +2,7 @@
 import './globals.css'
 import Navbar from '../../components/Navbar'
 import Popup from '../../components/Popup'
+import Footer from '../../components/Footer'
 
 export const metadata = {
   title: 'LycheeByte',
@@ -19,10 +20,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <Popup />
         {children}
+        <Footer />
       </body>
-      <footer className="w-full bg-white text-center py-4 text-sm text-gray-500">
-        © 2025 LycheeByte
-      </footer>
     </html>
   )
 }

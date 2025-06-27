@@ -160,7 +160,7 @@ export default function Home() {
                         </div>
                         <h3 className="text-lg md:text-2xl font-semibold mb-3">Process</h3>
                         <ul className="list-disc pl-5 text-sm md:text-base space-y-1">
-                            <li>Structured and systematic (DOE)</li>
+                            <li>Structured and systematic</li>
                             <li>Designed for manufacturability (DFM)</li>
                             <li>Biased for automation and technology adaptation</li>
                         </ul>
@@ -202,14 +202,20 @@ export default function Home() {
                     <div className="inline-block bg-[#64C084] text-black text-xs font-bold tracking-wide px-3 py-1">
                         / / PROJECTS / /
                     </div>
+
+                    <h2 className="text-3xl md:text-4xl font-semibold mt-5 max-w-4xl text-white">
+                        A snapshot of our impact across the CMP and cleaning ecosystem
+                    </h2>
                 </div>
 
                 <div className="max-w-7xl mx-auto">
                     <Carousel />
                 </div>
+
             </section>
 
             <section id="about" className="scroll-mt-16 py-15 px-4 bg-[#64C084]">
+
                 <div className="max-w-7xl mx-auto">
                     {/* Section Tag */}
                     <div className="inline-block bg-[#ca2976] text-white text-xs font-bold tracking-wide px-3 py-1 mb-15">
@@ -226,8 +232,8 @@ export default function Home() {
                         </p>
                         <Image src="/logo_black.png" alt="LycheeByte Logo" width={100} height={100} className="w-[50px] h-auto mt-4 ml-auto pr-2" />
                     </div>
-
                 </div>
+
             </section>
 
             <section id="contact" className="scroll-mt-16 bg-white py-15 px-4 flex flex-col">
@@ -278,6 +284,7 @@ export default function Home() {
                 </form>
 
             </section>
+            
         </main>
     )
 }

@@ -46,7 +46,7 @@ export default function Carousel() {
     if (itemsPerView === 1) {
       setIndex(index + 1);
     } else {
-      setIndex(2);
+      setIndex(1);
     }
     setShowLeftArrow(false); // hide left during transition
     setShowRightArrow(false); // hide right too to prevent flicker
@@ -86,7 +86,7 @@ export default function Carousel() {
       {/* Viewport */}
       <div className="overflow-hidden w-full">
         <div
-          className="flex transition-transform duration-500 md:duration-00 ease-in-out"
+          className="flex transition-transform duration-500 ease-in-out"
           style={{
             width: `${projects.length * (100 / itemsPerView)}%`,
             transform: `translateX(-${index * (100 / projects.length)}%)`,
@@ -113,7 +113,7 @@ export default function Carousel() {
         onClick={handleNext}
         disabled={index === 2}
         className={`ml-3 rounded-full z-10 transition-opacity duration-300 
-          ${index === 2 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+          ${index === 2 || (index === 1 && itemsPerView === 2) ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
       >
         <CircleArrowRight size={40} color="#64C084" />
       </button>
