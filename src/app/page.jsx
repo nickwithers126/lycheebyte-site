@@ -36,7 +36,7 @@ export default function Home() {
                     </div>
 
                     <h2 className="text-3xl md:text-4xl font-semibold mt-5 max-w-4xl text-white">
-                        Driving innovation through the seamless integration of product, process, and business development.
+                        Driving innovation through the seamless integration of product, process, and business development
                     </h2>
                 </div>
 
@@ -146,7 +146,7 @@ export default function Home() {
                     </div>
 
                     <h2 className="text-3xl md:text-4xl font-semibold mt-5 max-w-4xl">
-                        Strategic frameworks that scale ideas into impact — from design to delivery.
+                        Strategic frameworks that scale ideas into impact — from design to delivery
                     </h2>
                 </div>
 
